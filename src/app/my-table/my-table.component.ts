@@ -80,18 +80,18 @@ constructor(public scrubService: scrubService, private http: HttpClient, private
 
         this.fileReader.readAsText(fileToRead, "UTF-8");
         this.fileReader.onload = (event: Event) =>{
-          this.fileReader.result;
-          //this.onFileLoad();
+          this.onFileLoad(event);
         }
         
     }
   }
 
-    onFileLoad() {
+    onFileLoad(event) {
 
       // const textFromFileLoaded = fileLoadedEvent.target.result;
       // this.csvContent = textFromFileLoaded;
-      let obj = this.fileReader.result.split(/\r|\n|\r/);
+     // let content: string = this.fileReader.result;
+      let obj = event.target.result.split(/\r|\n|\r/);
       let headers = obj[0].split(',');
       let lines = [];
       // console.log(obj);
@@ -111,13 +111,13 @@ constructor(public scrubService: scrubService, private http: HttpClient, private
               this.InputModal.Inputs = this.dataModel;
           }
       }
-      this.scrubService = new scrubService(this.http, );
-      this.Results = new Results();
+      // this.scrubService = new scrubService(this.http, );
+      // this.Results = new Results();
 
-      this.Results.Results = new Output();
-      this.Results.Results.output1 = new Content();
-      this.Results.Results.output1.value = new Response();
-      this.Results.Results.output1.value.Values = Array<Array<string>>();
+      // this.Results.Results = new Output();
+      // this.Results.Results.output1 = new Content();
+      // this.Results.Results.output1.value = new Response();
+      // this.Results.Results.output1.value.Values = Array<Array<string>>();
 
       this.scrubService.calltheAPI(this.InputModal).subscribe(scrub => {
           if (scrub != null) {
