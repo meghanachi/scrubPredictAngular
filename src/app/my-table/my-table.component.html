@@ -1,0 +1,100 @@
+<input type="file" (change)="onFileSelect($event.target)" name="myfile">
+<input type="button" value="Upload" (click)="onFileLoad()" name="myButton">
+<div class="mat-elevation-z8">
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <ng-container matColumnDef="claimId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ClaimId </th>
+      <td mat-cell *matCellDef="let row"> {{row.claimId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ProviderLastName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ProviderLastName </th>
+      <td mat-cell *matCellDef="let row"> {{row.ProviderLastName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ProviderNPI">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ProviderNPI </th>
+      <td mat-cell *matCellDef="let row"> {{row.ProviderNPI}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ProviderAddress1">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ProviderAddress1 </th>
+      <td mat-cell *matCellDef="let row"> {{row.ProviderAddress1}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="CityName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> CityName </th>
+      <td mat-cell *matCellDef="let row"> {{row.CityName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ZipCode">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ZipCode </th>
+      <td mat-cell *matCellDef="let row"> {{row.ZipCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="GenderCode">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> GenderCode </th>
+      <td mat-cell *matCellDef="let row"> {{row.GenderCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="PatAcct">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> PatAcct </th>
+      <td mat-cell *matCellDef="let row"> {{row.PatAcct}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="HeaderChargeAmt">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> HeaderChargeAmt </th>
+          <td mat-cell *matCellDef="let row"> {{row.HeaderChargeAmt}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="AdmitDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> AdmitDate </th>
+      <td mat-cell *matCellDef="let row"> {{row.AdmitDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="SubmittypeCode">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> SubmittypeCode </th>
+      <td mat-cell *matCellDef="let row"> {{row.SubmittypeCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="IsCurrent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> IsCurrent </th>
+      <td mat-cell *matCellDef="let row"> {{row.IsCurrent}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="PaidAmount">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> PaidAmount </th>
+      <td mat-cell *matCellDef="let row"> {{row.PaidAmount}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="IsCapitated">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> IsCapitated </th>
+      <td mat-cell *matCellDef="let row"> {{row.IsCapitated}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="IsScrubbed">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> IsScrubbed </th>
+      <td mat-cell *matCellDef="let row"> {{row.IsScrubbed}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ScoredLabels">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ScoredLabels </th>
+      <td mat-cell *matCellDef="let row"> {{row.ScoredLabels}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ScoredProbabilities">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ScoredProbabilities </th>
+      <td mat-cell *matCellDef="let row"> {{row.ScoredProbabilities}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      
+      [pageIndex]="0"
+      [pageSize]="50"
+      [pageSizeOptions]="[25, 50, 100, 250, 500, 1000]">
+  </mat-paginator>
+</div>

@@ -2,5 +2,5 @@ import  { ModalInput1 } from './input1Modal';
 
 export class RootModal {
 
-    input: ModalInput1
+    input1: ModalInput1
 }

@@ -40,13 +40,7 @@ const httpOptions = {
     'Authorization': 'Bearer' + ' ' +  this.apiKey
   })
 };
-console.log(httpOptions.headers.get("Authorization"));
-
-
-    let httpHandlers: HttpHandler;
-    this.http = new HttpClient(httpHandlers);
-    //return this.http.request(new HttpRequest("POST", this.apiUrl, {headers: headers}));
-    return httpClient.post(this.apiUrl, request,  httpOptions)
+  return httpClient.post(this.apiUrl, request,  httpOptions)
   }
 
 }

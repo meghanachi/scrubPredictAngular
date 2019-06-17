@@ -1,0 +1,89 @@
+.full-width-table {
+  width: 100%;
+}
+
+.mat-column-claimId{
+  width: 70px;
+}
+.mat-column-ProviderLastName{
+  width: 70px;
+}
+.mat-column-ProviderNPI{
+  width: 70px;
+}
+.mat-column-ProviderAddress1{
+  width: 70px;
+}
+.mat-column-CityName{
+  width: 70px;
+}
+.mat-column-ZipCode{
+  width: 70px;
+}
+.mat-column-GenderCode{
+  width: 70px;
+}
+.mat-column-PatAcct{
+  width: 70px;
+}
+.mat-column-HeaderChargeAmt{
+  width: 70px;
+}
+.mat-column-AdmitDate{
+  width: 70px;
+}
+.mat-column-SubmittypeCode{
+  width: 70px;
+}
+.mat-column-IsCurrent{
+  width: 70px;
+}
+.mat-column-PaidAmount{
+  width: 70px;
+}
+.mat-column-IsCapitated{
+  width: 70px;
+}
+.mat-column-IsScrubbed{
+  width: 70px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 300px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+ .mat-column-name{
+border-right: 1px solid grey;
+align-self: stretch;
+text-align: center
+
+
+}
+.mat-column-position{
+border-right: 1px solid grey;
+align-self: stretch;
+text-align: center;
+
+}
+.mat-column-weight{
+border-right: 1px solid grey;
+align-self: stretch;
+text-align: center;
+
+} 
+.mat-column-symbol{
+
+text-align: center;
+align-self: stretch;
+}
+.mat-column-weight{
+   align-self: stretch;
+} 
